@@ -8,7 +8,7 @@ module.exports = {
     const hashedPassword = await bcrypt.hash('12345678', 12);
 
     const [adminRole] = await queryInterface.sequelize.query(
-      "SELECT id FROM roles WHERE name = 'Admin'"
+      "SELECT id FROM roles WHERE name = 'Administrador'"
     );
 
     await queryInterface.bulkInsert('users', [
